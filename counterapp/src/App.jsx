@@ -17,19 +17,14 @@ function App() {
     <Navbar />
 
     <Routes>
-    <Route path="/login" element={  <Login/>}></Route>
+    <Route path="/login" element={<Login/>}></Route>
      
       <Route path="/" element={ <Home />}></Route>
-      <Route path="/counter" element={ <Counter/>}></Route>
+      <Route path="/Counter" element={ <Counter/>}></Route>
       <Route path="/section" element={ <Section/>}></Route>
 
     </Routes>
 
-   
-
-    
-
-     
       
       <Footer/>
 
