@@ -19,6 +19,7 @@ function App() {
     <Routes>
 
       <Route path="/login" element={<Login/>}></Route>
+      
       <Route exact path="/Type1Useeffect" element={<Type1Useeffect/>}/>
       <Route exact path="/Type2Useeffect" element={<Type2Useeffect/>}/>
       <Route exact path="/Type3Useeffect" element={<Type3Useeffect/>}/>
