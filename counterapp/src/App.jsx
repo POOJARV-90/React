@@ -11,6 +11,13 @@ import Type1Useeffect from './Components/Type1Useeffect';
 import Type2Useeffect from './Components/Type2Useeffect';
 import Type3Useeffect from './Components/Type3Useeffect';
 import Type4Useeffect from './Components/Type4Useeffect';
+import DynamicStyle from './Components/04-7-23/DynamicStyle';
+import Dynamicclasses from './Components/04-7-23/Dynamicclasses';
+import ChildrenProps from './Components/04-7-23/ChildrenProps';
+import Params from './Components/02-7-23/Params';
+import Singlepoduct from './Components/02-7-23/Singlepoduct';
+import Declarativeways from './Components/02-7-23/Declarativeways';
+import Map from './Components/02-7-23/Map';
 
 function App() {
   return (
@@ -24,10 +31,18 @@ function App() {
       <Route exact path="/Type2Useeffect" element={<Type2Useeffect/>}/>
       <Route exact path="/Type3Useeffect" element={<Type3Useeffect/>}/>
       <Route exact path="/Type4Useeffect" element={<Type4Useeffect/>}/>
+      <Route exact path="/Params" element={<Params/>}/>
+      <Route exact path="/Singlepoduct/:id" element={<Singlepoduct/>}/> 
+      <Route exact path="/Declarativeways" element={<Declarativeways/>}/>
+     <Route exact path='/Map' element={<Map examplearray={["pooja","vidhi","samiksha"]}/>}/>
+      <Route exact path="/DynamicStyle" element = {<DynamicStyle/>} />
+      <Route exact path="/Dynamicclasses"element = {<Dynamicclasses/>}/>
+      <Route exact path='/ChildrenProps' element= {<ChildrenProps/>}/>
 
       <Route path="/" element={ <Home />}></Route>
       <Route path="/Counter" element={ <Counter/>}></Route>
       <Route path="/section" element={ <Section/>}></Route>
+
 
      </Routes>
 
