@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Map = (props) => {
-  console.log(props.examplearray,"array here");
+  console.log(props.myUser,"array here");
   return (
     <div>
       {props.examplearray && props?.examplearray.map((str)=>(
@@ -11,6 +11,10 @@ const Map = (props) => {
 
       ))
       }
+
+      <button onClick={()=> props?.setmyUser(
+        [...props.myUser,"ROSE"]
+      )} > Add Users </button>
     </div>
   )
 }
