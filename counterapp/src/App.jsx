@@ -21,6 +21,7 @@ import Map from './Components/02-7-23/Map';
 import { useState } from 'react';
 import Wrapper from './Components/02-7-23/Wrapper';
 import StyledCompo from './Components/02-7-23/StyledCompo.jsx';
+import FormOne from './Components/06-7-23/FormOne';
 
 function App() {
 
@@ -45,6 +46,7 @@ function App() {
       <Route exact path='/ChildrenProps' element= {<ChildrenProps/>}/>
       <Route exact path='/Wrapper' element={<Wrapper/>}/>
       <Route exact path='/StyledCompo' element={<StyledCompo/>}/>
+      <Route exact path='/FormOne' element={<FormOne/>}/>
 
       <Route path="/" element={ <Home />}></Route>
       <Route path="/Counter" element={ <Counter/>}></Route>
