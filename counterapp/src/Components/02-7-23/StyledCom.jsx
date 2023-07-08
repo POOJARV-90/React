@@ -2,7 +2,7 @@ import React from 'react'
 
 import Styled from 'styled-components'
 
-const StyledCompo = () => {
+const StyledCom = () => {
 
     const MyDiv = Styled.div`color: red; font-size: 40px;`;
 
@@ -11,4 +11,4 @@ const StyledCompo = () => {
     )
 }
 
-export default StyledCompo
+export default StyledCom;
