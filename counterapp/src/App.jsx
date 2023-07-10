@@ -24,6 +24,8 @@ import StyledCompo from './Components/02-7-23/StyledCom'
 import FormOne from './Components/06-7-23/FormOne';
 import Callback from './Components/08-7-23/Callback';
 import Formtwo from './Components/08-7-23/Formtwo';
+import UseMemo from './Components/09-7-23/UseMemo';
+import UseReducer from './Components/09-7-23/UseReducer';
 
 function App() {
 
@@ -51,6 +53,9 @@ function App() {
       <Route exact path='/FormOne' element={<FormOne/>}/>
       <Route exact path='/Callback' element={<Callback/>}/>
       <Route exact path='/Formtwo' element={<Formtwo/>}/>
+      <Route exact path='/UseMemo' element={<UseMemo/>}/>
+      <Route exact path='/UseReducer' element={<UseReducer/>}/>
+      
 
       <Route path="/" element={ <Home />}></Route>
       <Route path="/Counter" element={ <Counter/>}></Route>
