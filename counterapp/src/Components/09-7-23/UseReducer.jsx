@@ -36,7 +36,7 @@ const UseReducer = () => {
     
     const Payload =() =>{
         console.log("payload")
-        dispatch({ type: "PAYLOAD" });
+        dispatch({ type: "PAYLOAD"});
     }
   return (
     <div>
