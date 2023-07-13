@@ -28,6 +28,7 @@
  height: 360px;
  margin-bottom: 30px;
  font-size: 15px;
+ cursor: pointer;
 }
 #img{
     width: 80%;

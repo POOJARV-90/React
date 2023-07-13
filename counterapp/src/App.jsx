@@ -27,6 +27,7 @@ import Formtwo from './Components/08-7-23/Formtwo';
 import UseMemo from './Components/09-7-23/UseMemo';
 import UseReducer from './Components/09-7-23/UseReducer';
 import ProductsFromBackend from './Components/11-7-23/ProductsFromBackend';
+import Product from './Components/13-7-23/Product ';
 
 function App() {
 
@@ -57,6 +58,7 @@ function App() {
       <Route exact path='/UseMemo' element={<UseMemo/>}/>
       <Route exact path='/UseReducer' element={<UseReducer/>}/>
       <Route exact path='/ProductsFromBackend' element={<ProductsFromBackend/>}/>
+      <Route exact path='/product/:id' element={<Product />} />
       
 
       <Route path="/" element={ <Home />}></Route>
