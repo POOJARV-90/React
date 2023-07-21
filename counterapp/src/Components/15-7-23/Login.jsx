@@ -1,14 +1,22 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../15-7-23/Login.css"
+import { useContext } from "react";
+import { Authcontext } from "../../context/Auth.context";
 
 function Login() {
 
+    const { state, login} = useContext(Authcontext);   //, logout 
+    console.log(state,"stse")
+
     const [userData, setUserData] = useState({ email: "", password: "" })
     const router = useNavigate();
+
     const handleChange = (event) => {
         setUserData({ ...userData, [event.target.name]: event.target.value })
     }
+
+
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -25,7 +33,7 @@ function Login() {
             if (flag == false) {
                 return alert("Incorrect username or password")
             }
-            localStorage.setItem(("CurrentUser"),JSON.stringify(userData));
+            login(userData);    //context fun
             alert("Login successfull :)");
             setUserData({ email: "", password: "" })
             router('/');

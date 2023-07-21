@@ -1,24 +1,30 @@
 import React, { useEffect, useState } from 'react'
 import '../15-7-23/Navbar.css'
 import { useNavigate } from 'react-router-dom';
+import { useContext} from "react";
+import  {Authcontext} from '../../context/Auth.context'
 
 const Navbar = () => {
+
+    const { state, login , logout} = useContext(Authcontext);   //, logout 
+    console.log(state,"stse")
 
     const [user, setUser] = useState({});
     const router = useNavigate();
 
     useEffect(() => {
-        const Present = JSON.parse(localStorage.getItem("CurrentUser"));
-        if (Present) {
-            setUser(Present)
-        }
-    })
+        if (state?.user) {
+            setUser(state?.user)
+        } else {
+            setUser({});
+        } 
+    },[state])
 
-    function logout() {
-        localStorage.removeItem("CurrentUser")
-        setUser({})
-        router('/')
-    }
+    // function logout() {
+    //     localStorage.removeItem("CurrentUser")
+    //     setUser({})
+    //     router('/')
+    // }
   return (
     <div id='Navbar'>
         <div>  <div onClick={() => router('/')}><img src="https://c8.alamy.com/zooms/9/f3551f7b47064d73a7f423f337030f37/2g10x5h.jpg" alt="" /> </div> </div>
