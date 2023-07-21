@@ -1,0 +1,43 @@
+#formbody{
+    width: 100%;
+    /* border: 1px solid red; */
+    height: 1000px;
+}
+#formbody>h1{
+    text-align: center;
+    margin-bottom: 3%;
+    color: rgb(39, 39, 119);
+}
+
+#formbody>form{
+     border: 1px solid rgb(39, 39, 119);
+     width: 40%;
+     align-items: center;
+     padding: 6% 0%;
+     margin: auto;
+     border-radius: 6px;
+     background-color: lavender;
+     background-image: url("https://clideo.com/files/content/how-to-make-background-blur-for-vertical-video.jpg");
+}
+
+#formbody>form>label{
+    font-size: x-large;
+    margin-left: 23%;
+
+}
+
+#formbody>form>input{
+    padding: 2%;
+    width: 60%;
+    margin-left: 23%;
+     border: 1px solid rgb(39, 39, 119);
+    
+}
+
+#formbody>form>input:nth-child(9){
+    padding: 5px 40px;
+    width: 60%;
+    margin-left: 23%;
+    margin-top: 10%;
+    
+}

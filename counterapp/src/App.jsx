@@ -1,10 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
 import Home from './Home';
-import Navbar from './Components/Navbar';
+import Navbar from './Components/15-7-23/Navbar';
 import Footer from './Components/Footer';
 import {Routes,Route} from 'react-router-dom';
-import Login from './Components/Login';
+import Login from './Components/15-7-23/Login';
 import Counter from './Components/Counter';
 import Section from './Components/Section';
 import Type1Useeffect from './Components/Type1Useeffect';
@@ -28,13 +28,16 @@ import UseMemo from './Components/09-7-23/UseMemo';
 import UseReducer from './Components/09-7-23/UseReducer';
 import ProductsFromBackend from './Components/11-7-23/ProductsFromBackend';
 import Product from './Components/13-7-23/Product ';
+import Register from './Components/15-7-23/Register';
+import Loginflight from './Components/flight/Loginflight';
+import Cart from './Components/18-7-23/Cart';
 
 function App() {
 
   const [myUser,setmyUser]= useState(["POOJA","VIDHI","MISHA","MERLIN"])
   return (
     <div>
-    <Navbar />
+    <Navbar/>
     <Routes>
 
       <Route path="/login" element={<Login/>}></Route>
@@ -59,11 +62,13 @@ function App() {
       <Route exact path='/UseReducer' element={<UseReducer/>}/>
       <Route exact path='/ProductsFromBackend' element={<ProductsFromBackend/>}/>
       <Route exact path='/product/:id' element={<Product />} />
-      
-
       <Route path="/" element={ <Home />}></Route>
       <Route path="/Counter" element={ <Counter/>}></Route>
       <Route path="/section" element={ <Section/>}></Route>
+      <Route path="/Register" element={ <Register/>}></Route>
+      <Route path="/Loginflight" element={ <Loginflight/>}></Route>
+      <Route path="/Cart" element={ <Cart/>}></Route>
+
 
 
      </Routes>

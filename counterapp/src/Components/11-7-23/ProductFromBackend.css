@@ -25,10 +25,11 @@
  width: 18%;
  /* border: 1px solid grey; */
  box-shadow: 0 1px 3px rgb(186, 184, 184);
- height: 360px;
+ height: 390px;
  margin-bottom: 30px;
  font-size: 15px;
  cursor: pointer;
+ 
 }
 #img{
     width: 80%;
@@ -48,6 +49,16 @@
 }
 #category{
     margin-left: 20px;
+}
+#rating{
+    /* border:  1px solid green; */
+    border-radius: 15px;
+    margin-left: 20px;
+    color: white;
+    background-color: rgb(23, 23, 71);
+    align-items: center;
+    padding: 1% 2%;
+    font-size: small;
 }
 
 #load{
