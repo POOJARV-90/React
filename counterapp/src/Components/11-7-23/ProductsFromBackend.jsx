@@ -33,7 +33,7 @@ const ProductsFromBackend = () => {
                             <p id='detail'  > {pro.title}</p >
                             <h3 style={{ marginLeft: "20px" }}>Rs. {pro.price}</h3>
                             <p id='category'> <b>Category :</b>{pro.category}</p>
-                            <span id='rating'> {pro.rating.rate} <i class="fa-regular fa-star"></i> </span>
+                            <span id='rating'> {pro.rating.rate} <i className="fa-regular fa-star"></i> </span>
 
                         </div>
                     ))}

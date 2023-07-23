@@ -10,7 +10,7 @@ const Cart = () => {
 
   const navigate = useNavigate();
 
-  console.log(userCart, "- userCart")
+  console.log(userCart, "- userCart-13")
 
   useEffect(() => {
     if (userCart.length) {
@@ -26,17 +26,21 @@ const Cart = () => {
 
   useEffect(() => {
     const user = JSON.parse(localStorage.getItem("CurrentUser"));
+
     if (user?.email) {
 
         const allUsers = JSON.parse(localStorage.getItem("Users"));
+
         for (var i = 0; i < allUsers.length; i++) {
             if (allUsers[i].email == user.email && allUsers[i].password == user.password) {
+              console.log(allUsers[i],"line-36");
                 setUserCart(allUsers[i].cart)
                 
                 break;
             }
         }
-    } else {
+    }
+     else {
         alert("Please login to watch all cart products.");
         navigate  ('/login')
     }
@@ -49,10 +53,11 @@ function buyProducts() {
       for (var i = 0; i < allUsers.length; i++) {
           if (allUsers[i].email == user.email && allUsers[i].password == user.password) {
               allUsers[i].cart = [];
+              localStorage.setItem("Users", JSON.stringify(allUsers))
               break;
           }
       }
-      localStorage.setItem("Users", JSON.stringify(allUsers))
+     
   }
   setFinalPrice(0)
   setUserCart([]);
@@ -67,7 +72,7 @@ function buyProducts() {
     <div id='body-1' style={{display:'flex'}}>
       
       <div id='container-1' >
-        {userCart.length && userCart.map((pro) => (    //.length
+        {userCart?.length && userCart.map((pro) => (    //.length
           <div id='product-1'>
             <img
               id='img-1'

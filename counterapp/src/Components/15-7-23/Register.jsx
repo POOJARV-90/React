@@ -9,7 +9,7 @@ const Register = () => {
     const router = useNavigate();
 
     const handlechange = (e) => {
-        setUserdata({... userdata, [e.target.name]:[e.target.value]})  //... for setting the prvious set in history
+        setUserdata({...userdata, [e.target.name]:e.target.value})  //... for setting the prvious set in history
 
     }
 

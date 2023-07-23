@@ -6,6 +6,7 @@ import { Authcontext } from "../../context/Auth.context";
 
 function Login() {
   const { state, login } = useContext(Authcontext); //, logout
+  console.log(state)  
 
   const [userData, setUserData] = useState({ email: "", password: "" });
   const navigate = useNavigate(); // Use navigate from useNavigate directly
@@ -30,7 +31,7 @@ function Login() {
         }
       }
 
-      if (flag === false) {
+      if (flag == false) {
         return alert("Please check credentials.");
       }
     } else {
@@ -65,7 +66,7 @@ function Login() {
         <br />
       </form>
     </div>
-  );
+  )
 }
 
 export default Login;

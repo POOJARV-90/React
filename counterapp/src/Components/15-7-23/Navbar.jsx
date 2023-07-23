@@ -13,7 +13,7 @@ const Navbar = () => {
     const [user, setUser] = useState({});
  
     const router = useNavigate();
-    console.log(user ,"user in profile")
+    // console.log(user ,"user in profile")
 
     useEffect(() => {
         if (state?.user) {

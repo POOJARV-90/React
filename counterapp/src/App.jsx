@@ -32,6 +32,7 @@ import Register from './Components/15-7-23/Register';
 import Loginflight from './Components/flight/Loginflight';
 import Cart from './Components/18-7-23/Cart';
 import Profile from './Components/22-7-23/Profile';
+;
 
 function App() {
 

@@ -7,6 +7,7 @@ const Product = () => {
     const [products, setProducts] = useState([]);
     const [singleProduct, setSingleProduct] = useState({});
     const [isuserlogin , setisUserlogin] = useState(false)
+
     const [currentUserEmail, setCurrentUserEmail] = useState("");
     const router  = useNavigate();
 
@@ -26,11 +27,11 @@ const Product = () => {
         }
     }, [id, products])
 
-    console.log(singleProduct, "- singleProduct")
+    // console.log(singleProduct, "- singleProduct")
 
     useEffect(()=>{
         var user = JSON.parse(localStorage.getItem("CurrentUser"));
-        console.log(user);
+        // console.log(user);
         if (user)
         {setisUserlogin(true);
             setCurrentUserEmail(user.email)
@@ -38,16 +39,30 @@ const Product = () => {
         
     }, [])
 
-    function addCart() {
-        if (isuserlogin) {
-            const users = JSON.parse(localStorage.getItem("Users"));
+    console.log(singleProduct ,"product");
 
-            for (var i = 0; i < users.length; i++) {
-                if (users[i].email == currentUserEmail) {
-                    users[i].cart.push(singleProduct);
-                    localStorage.setItem("Users", JSON.stringify(users));
+
+    function addCart() {
+        console.log("line-46")
+        if (isuserlogin) {
+            console.log("line-48")
+            const allusers = JSON.parse(localStorage.getItem("Users"));
+            // const sigleuser = JSON.parse(localStorage.getItem("CurrentUser"));
+            
+//users[i].email 
+            for (var i = 0; i < allusers.length; i++) {
+                console.log("line-54")
+                console.log(allusers[i],"all user")
+                console.log(allusers[i].email,"line-55")
+                if ( allusers[i].email  == currentUserEmail) {
+                    allusers[i]?.cart.push(singleProduct);
+                //    console.log() 
+                    console.log(allusers[i],"line-58")
+                    localStorage.setItem("Users", JSON.stringify(allusers));
+                    
                     break;
                 }
+
             }
             alert ("Product added to your cart")
             router('/ProductsFromBackend')
