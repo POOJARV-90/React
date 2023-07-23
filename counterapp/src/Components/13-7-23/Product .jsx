@@ -53,7 +53,7 @@ const Product = () => {
             router('/ProductsFromBackend')
         } else {
             alert("You can't add product before login ")
-            router('/login')
+            // router('/login')
             
         }
 

@@ -5,15 +5,17 @@ import {Authcontext} from './context/Auth.context'
 function Home(){ 
 
     const { state, login , logout} = useContext(Authcontext);   //, logout 
-    console.log(state,"stse")
+    console.log(state,"state")
     const [isuserlogin , setisUserlogin] = useState(false)
     const router  = useNavigate();
     const goto =  useNavigate();
 
     useEffect(()=> {
+
         // var user = JSON.parse(localStorage.getItem("CurrentUser"));
         // console.log(user);
         // if (user){setisUserlogin(true);}
+
         if  (state?.user?.email) {
             setisUserlogin(true);
         } else {

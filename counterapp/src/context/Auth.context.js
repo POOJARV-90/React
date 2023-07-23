@@ -23,7 +23,8 @@ const AuthProvider = ({children}) => {
     const [state , dispatch] = useReducer(reducer,incialState);
 
     const login = (userData) => {
-      localStorage.setItem(("CurrentUser"),JSON.stringify(userData));
+
+      localStorage.setItem("CurrentUser",JSON.stringify(userData)); // 
 
         dispatch({
             type :'login',
@@ -31,7 +32,7 @@ const AuthProvider = ({children}) => {
         })
     }
 
-    const logout =(userData) => {
+    const logout =() => {   //userData
       localStorage.removeItem("CurrentUser")
         dispatch({
             type : 'logout'
@@ -40,6 +41,7 @@ const AuthProvider = ({children}) => {
 
     useEffect(() => {
       const user = JSON.parse(localStorage.getItem("CurrentUser"));
+
       if (user) {
           dispatch({
               type: 'login',

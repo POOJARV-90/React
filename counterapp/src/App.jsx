@@ -31,6 +31,7 @@ import Product from './Components/13-7-23/Product ';
 import Register from './Components/15-7-23/Register';
 import Loginflight from './Components/flight/Loginflight';
 import Cart from './Components/18-7-23/Cart';
+import Profile from './Components/22-7-23/Profile';
 
 function App() {
 
@@ -68,6 +69,9 @@ function App() {
       <Route path="/Register" element={ <Register/>}></Route>
       <Route path="/Loginflight" element={ <Loginflight/>}></Route>
       <Route path="/Cart" element={ <Cart/>}></Route>
+      <Route path="/Profile" element={ <Profile/>} />
+
+
 
 
 

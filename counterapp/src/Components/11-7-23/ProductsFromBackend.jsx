@@ -28,7 +28,7 @@ const ProductsFromBackend = () => {
                 <div id='container' >
                     {products.map((pro) => (
                         // onClick={()=> router(`/product/${pro.id}`)}
-                        <div id='product'  onClick={() => redirect(pro.id)} >
+                        <div id='product'  onClick={ () => redirect(pro.id)} >
                             <img id='img'  src={pro.image} />
                             <p id='detail'  > {pro.title}</p >
                             <h3 style={{ marginLeft: "20px" }}>Rs. {pro.price}</h3>

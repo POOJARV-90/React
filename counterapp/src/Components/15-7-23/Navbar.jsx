@@ -7,10 +7,13 @@ import  {Authcontext} from '../../context/Auth.context'
 const Navbar = () => {
 
     const { state, login , logout} = useContext(Authcontext);   //, logout 
-    console.log(state,"stse")
+
+    // console.log(state,"stse")
 
     const [user, setUser] = useState({});
+ 
     const router = useNavigate();
+    console.log(user ,"user in profile")
 
     useEffect(() => {
         if (state?.user) {
@@ -32,14 +35,17 @@ const Navbar = () => {
         <div >
                 {user?.email ?
                     <>
-                        <span className='left' onClick={() => router('/ProductsFromBackend')}>Products</span>
-                        <span className='left'>Profile</span>
-                        <span className='left'  onClick={() => router('/cart')} ><i class="fa-solid fa-cart-shopping"></i>  <p>Cart</p></span>
-                        <span className='left' onClick={logout} > <i class="fa-solid fa-arrow-right-from-bracket"></i> <p>Logout</p> </span>
+                        <span id='left' onClick={() => router('/ProductsFromBackend')}>Products</span>
+
+                        <span id='left'  onClick={() => router('/Profile')}> Profile  - {user?.name} </span>
+                        <span id='left'  onClick={() => router('/cart')} ><i className="fa-solid fa-cart-shopping"></i>  <p>Cart</p></span>
+                        <span id='left' onClick={logout} > <i className="fa-solid fa-arrow-right-from-bracket"></i> <p>Logout</p> </span>
                     </>
                     :
                     <span  id='login' onClick={() => router('/login')}>Login</span>
                 }
+
+
             </div>
 
 

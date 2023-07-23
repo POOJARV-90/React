@@ -5,7 +5,7 @@ import "../15-7-23/Reg.css"
 const Register = () => {
  
     const [userdata , setUserdata] = useState ({name: "", email: "", password: ""});
-    console.log(userdata, "- userdata")
+    // console.log(userdata, "- userdata")
     const router = useNavigate();
 
     const handlechange = (e) => {
