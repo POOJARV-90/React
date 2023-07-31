@@ -25,6 +25,7 @@ function Login() {
           flag = true;
           login(users[i]);
           alert("Login successful.");
+          
           setUserData({ email: "", password: "" });
           navigate('/'); // Use navigate to redirect to the home page
           break;
