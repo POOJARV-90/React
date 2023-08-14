@@ -32,6 +32,7 @@ import Register from './Components/15-7-23/Register';
 import Loginflight from './Components/flight/Loginflight';
 import Cart from './Components/18-7-23/Cart';
 import Profile from './Components/22-7-23/Profile';
+import Ref from './Components/22-7-23/Ref';
 ;
 
 function App() {
@@ -71,6 +72,7 @@ function App() {
       <Route path="/Loginflight" element={ <Loginflight/>}></Route>
       <Route path="/Cart" element={ <Cart/>}></Route>
       <Route path="/Profile" element={ <Profile/>} />
+      <Route path="/Ref" element={ <Ref/>} />
 
 
 
