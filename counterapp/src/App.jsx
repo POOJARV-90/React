@@ -33,11 +33,25 @@ import Loginflight from './Components/flight/Loginflight';
 import Cart from './Components/18-7-23/Cart';
 import Profile from './Components/22-7-23/Profile';
 import Ref from './Components/22-7-23/Ref';
-;
+import Glogin from './Components/Glogin';
+
+import {gapi} from 'gapi-script'
+import { useEffect } from 'react';
+import Glogout from './Components/Glogout';
+const clientId = "581722904885-nmo8vn0eu5t9g8616v36imk2r3fbo8c8.apps.googleusercontent.com";
 
 function App() {
 
   const [myUser,setmyUser]= useState(["POOJA","VIDHI","MISHA","MERLIN"])
+  useEffect(()=>{
+    function start(){
+      gapi.client.init({
+        clientId:clientId,
+        scope:""
+      })
+    };
+    gapi.load('client:auth2',start)
+})
   return (
     <div>
     <Navbar/>
@@ -73,6 +87,11 @@ function App() {
       <Route path="/Cart" element={ <Cart/>}></Route>
       <Route path="/Profile" element={ <Profile/>} />
       <Route path="/Ref" element={ <Ref/>} />
+      <Route path="/OAuth-login" element={ <Glogin/>} />
+      <Route path="/OAuth-logout" element={ <Glogout/>} />
+   
+      
+
 
 
 
